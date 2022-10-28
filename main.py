@@ -15,6 +15,7 @@ pwd = ''
 # Password generation
 for i in range(pwd_length):
     pwd += ''.join(secrets.choice(alphabet))
+
 # Conditions
 while True:
     pwd = ''
@@ -50,7 +51,8 @@ layout = [[sg.Text('Welcome to my first GUI program!')],
 
 window = sg.Window('Password Generator', layout)
 
-while True:             # Event Loop
+# Event Loop
+while True:             
     event, values = window.read()
     if event == sg.WIN_CLOSED:
         break
